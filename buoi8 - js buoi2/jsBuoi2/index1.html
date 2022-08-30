@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		#divTong{
+			width: 100%;
+			height: 100%;
+			
+		}
+		#divTinh{
+			width: 400px;
+			height: 100%;
+			/*background: pink;*/
+			border-radius: 15px;
+			box-shadow: 1px 4px 10px 1px #aaa;
+			position: relative;
+			margin: 0 auto;
+			top: 50px;
+			padding-bottom: 30px;
+		}
+
+		#btn{
+			border-radius: 5px;
+			border: 1px solid gray;
+			box-shadow: 1px 3px 15px 1px #aaa;
+		}
+		#btn:hover{
+			background: #AFEEEE;
+			cursor: pointer;
+		}
+
+		#showCL{
+			width: 70%;
+			height: 25%;
+			/*background: yellow;*/
+			margin: 0 auto;
+			position: relative;
+			top: 20px;
+		}
+
+		#showSTN{
+			width: 70%;
+			height: 25%;
+			/*background: yellow;*/
+			margin: 0 auto;
+			position: relative;
+			top: 20px;
+		}
+
+		#showTu1{
+			width: 70%;
+			height: 25%;
+			/*background: yellow;*/
+			margin: 0 auto;
+			position: relative;
+			top: 20px;
+		}
+
+		#showSoLan{
+			width: 70%;
+			height: 30%;
+			/*background: yellow;*/
+			margin: 0 auto;
+			position: relative;
+			top: 20px;
+		}
+
+		
+		#inputNb{
+			border: none;
+		}
+	</style>
+</head>
+<body>
+	<div id="divTong">
+		<div id="divTinh">
+			<form style="text-align: center; font-size: 30px;font-family: Arial;">
+				Hãy nhập 1 số
+				<br>
+				<input type="number" id="inputNb" placeholder="Nhập số">
+				<br>
+				<button type="button"  id="btn" onclick="print()" >Tính</button>
+			</form>
+
+			
+				<script type="text/javascript">
+					let callcount = 0;
+					let checkstn ;
+					let countstn=0;
+
+					 var input = document.getElementById("inputNb");
+			        input.addEventListener("keypress", function(event) {
+			            if (event.key === "Enter") {
+			            event.preventDefault();
+			            document.getElementById("btn").click();
+			            // return false;
+			            }
+			        });
+					function print(){
+						
+						let so = parseFloat(document.getElementById('inputNb').value) ;
+						if(so%2==0){
+							document.getElementById('showCL').innerHTML = '=> Số '+so+' là số chẵn';
+						} else if(so%2==1){
+							document.getElementById('showCL').innerHTML = '=> Số '+so+' là số lẻ';
+						} else if (so < (Math.pow(999,999)))
+						{
+							document.getElementById('showCL').innerHTML = '=> Số '+so+' là số thập phân';
+						} 
+						document.getElementById('inputNb').value = '';
+
+						
+
+						// //Kiểm tra số nguyên số
+						for(let i=2;i<so;i++){
+							if(so%i==0){
+								countstn++;
+							}
+						}
+
+						if (countstn==0 && so >1){
+							document.getElementById('showSTN').innerHTML = '=> Số '+so+'  là số nguyên tố';
+						} else {
+							document.getElementById('showSTN').innerHTML = '=> Số '+so+'  không là số nguyên tố';
+						}
+						countstn=0
+						callcount ++;
+						document.getElementById('showTu1').innerHTML ='=> Các số từ 1 đến '+so+' là: ';
+						for(let i=1;i<=so;i++){
+							document.getElementById('showTu1').innerHTML += i +' ';
+						}
+
+						
+						document.getElementById('showSoLan').innerHTML = '=> Số lần đã nhập là: '+callcount;
+						
+					}
+					
+				</script>
+			<div id="showCL">
+
+			</div>
+			<div id="showSTN">
+
+			</div>
+			<div id="showTu1">
+
+			</div>
+			<div id="showSoLan">
+
+			</div>
+			
+		</div>
+	</div>
+</body>
+</html>

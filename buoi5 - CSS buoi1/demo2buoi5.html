@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Buổi 5 - bài 2</title>
+	<style type="text/css">
+		#divTong{
+			width: 1400px;
+			height:700px;
+			/*background: palegreen;*/
+		}
+
+		#divTren {
+			width: 100%;
+			height: 6%;
+			background: #BA55D3;
+		}
+
+		#divDuoi {
+			width: 100%;
+			height: 96%;
+			/*background: gray;*/
+		}
+
+		.chuTren {
+			margin-top: 7px;
+			position: absolute;
+		}
+
+		#divDuoi > .trai{
+			width: 88%;
+			height: 100%;
+			/*background: aqua;*/
+			float: left;
+			border-right: 60px solid #F0E68C;
+		}
+
+		#divDuoi > .phai{
+			width: 6%;
+			height: 100%;
+			/*background: red;*/
+			float: left;
+			border-left: 20px solid #BDB76B; 
+			
+		}
+
+		#divDuoi > .trai >.tren{
+			width: 100%;
+			height: 10%;
+			/*background: blue;*/
+			/*float: left;*/
+		}
+
+		#divDuoi > .trai >.duoi{
+			width: 100%;
+			height: 90%;
+			background: /*orange*/;
+			/*float: left;*/
+		}
+
+		#divDuoi > .trai >.duoi >.trai{
+			width: 40%;
+			height: 100%;
+			/*background: pink;*/
+			float: left;
+		}
+
+		#divDuoi > .trai >.duoi >.phai{
+			width: 60%;
+			height: 100%;
+			/*background: yellow;*/
+			float: left;
+		}
+
+		#divDuoi > .trai >.duoi >.trai > .tren{
+			width: 100%;
+			height: 70%;
+			/*background: green;*/
+			float: left;
+		}
+
+		#divDuoi > .trai >.duoi >.trai > .duoi{
+			width: 100%;
+			height: 30%;
+			background: #BA55D3;
+			float: left;
+		}
+
+		#divDuoi > .trai >.duoi >.trai > .tren >.trai{
+			width: 20%;
+			height: 100%;
+			/*background: black;*/
+			float: left;
+		}
+
+		#divDuoi > .trai >.duoi >.trai > .tren >.phai{
+			width: 80%;
+			height: 100%;
+			/*background: gray;*/
+			float: left;
+		}
+
+		.imgMau {
+			position: absolute;
+			height: 35px;
+			left: 979px;
+		}
+
+		.imgBuom1 {
+			position: absolute;
+			height: 100px;
+			top: 35px;
+			left: 800px;
+		}
+
+		.hoilan {
+			position: absolute;
+			top: 55px;
+			left: 759px;
+
+		}
+
+		.imgBuom4 {
+			position: absolute;
+			left: 980px;
+			top: 560px;
+			width: 300px;
+		}
+
+		.hoa {
+			position: absolute;
+			left: 730px;
+			top: 290px;
+			width: 300px;
+		}
+
+		.la {
+			position: absolute;
+			left: 143px;
+			top: 544px;
+		}
+
+		.la1, .la2, .la3{
+			
+			height: 170px;
+		}
+		
+		.chamNgang{
+			color: #BA55D3;
+		}
+
+		.chamDoc{
+			position: absolute;
+			color: #BA55D3;
+			top: 135px;
+			left: 530px;
+		}
+
+		.imgTruyenThuyet{
+			position: absolute;
+			left: 535px;
+			top: 290px;
+		}
+        
+        #divDuoi >.trai >.duoi >.trai> .tren >.phai> .tren {
+        	width: 100%;
+        	height: 13%;
+        	background: #BA55D3;
+        }
+
+       .doanVan{
+
+            width:100%;
+            height:360px;
+            overflow-x:hidden;
+            overflow-y:auto;
+       }
+
+
+		
+		
+
+	</style>
+</head>
+<body>
+	<div id="divTong">
+		<div id="divTren">
+			<div class="chuTren">
+				<span style="font-weight: bold;  font-size: 16px; font-family: Comic Sans MS;">
+					|<a href="" style="text-decoration:none; "><span style="color: black;"> Truyền thuyết  </span>
+					</a>|
+
+					<a href="" style="text-decoration:none;"><span style="color: black;"> Thế giới Hoa </span>
+					</a>|
+
+					<a href="" style="text-decoration:none;"><span style="color: black;"> Góc Hoa </span>
+					</a>|
+
+					<a href="" style="text-decoration:none;"><span style="color: black;"> Thiệp Hoa ... </span>
+					</a>|
+
+					<a href="" style="text-decoration:none; "><span style="color: black;"> Tham gia Hội Hoa Tp </span>
+					</a>|
+				</span>
+				
+			
+			</div>
+		</div>
+		<div id="divDuoi">
+
+			<div class="trai">
+				<div class="tren">
+					<img class = "imgMau"src="E:/gitHub/html-j2team/buoi5 - CSS buoi1/Bai 4.3 - Hoa Moc Lan/images/mau.gif" >
+
+					<img class="imgBuom1" src="E:/gitHub\html-j2team/buoi5 - CSS buoi1/Bai 4.3 - Hoa Moc Lan/images/buom1.gif">
+   						
+   						<div class="hoilan">
+   							<img  src="E:/gitHub/html-j2team/buoi5 - CSS buoi1/Bai 4.3 - Hoa Moc Lan/images/hoilan.gif" style="width: 180px">
+   						</div>
+	
+				</div>
+
+				<div class="duoi">
+					<div class="trai">
+						<div class="tren">
+							<div class="trai"></div>
+							<div class="phai">
+								<div class="tren" style="text-align: center">
+									<select class="http">
+										<option>
+											http://www.ClbLanTp.com.vn
+										</option>	
+									</select>
+								</div>
+								<div class="doanVan">
+									
+										<p style="font-size: 30px; color: purple;">
+											HOA MỘC LAN 
+										</p>
+										<p >
+										Ở Nhật Bản có một người con gái tên là Cây cỏ mồ côi cả cha lẫn mẹ. Nhà nghèo, ngay từ khi còn nhỏ nàng đã phải tự đi làm để kiếm sống. 
+										Nàng phải làm hoa giấy đem ra phố bán. Nhưng hoa bán đã nhiều, mà tiền thu về chẳng đáng là bao. Khi đã ra dáng một thiếu nữ. Cây cỏ cũng không có đủ tiền sắm nổi một bộ kimôno mà các cô con nhà quý phái vẫn mặc. 
+										Một đêm nọ khi Cây cỏ đang mải làm việc trong phòng của mình, bỗng có một con vẹt bay đến đậu trên bậc cửa sổ. Đôi cánh màu xanh của nó đã nhợt nhạt, có lẽ nó đã già song vẫn còn đủ minh mẫn và biết nói tiếng người. 
+										- Đừng đuổi ta, ta sẽ tiết lo cho nàng một điều bí mật về cách làm giàu. 
+										- Vẹt yêu quý ơi, cớ sao ta lại đuổi mi – Cây cỏ buồn bã mỉm cười - ở đời ta chẳng còn biết thộ lộ tâm tình với ai, thế mà mi lại nói được tiếng người. Cứ ở lại đây, cùng chia nghèo, sẻ khó với ta, còn sự giàu sang, phú qúy tốt nhất là chẳng nên màng tới, vì ta rất xa lạ với chuyện ấy. 
+										- Đa tạ Cây cỏ tốt bụng - Vẹt gật gù- Trước khi đi tìm chủ mới, ta đã chăm chú theo dỏi các cô gái bán hoa, và ta đã thấy nàng tặng bông hoa đẹp nhất của mình cho một cô gái nghèo như thế nào rồi. Cô gái nghèo ấy không có tiền nhưng lại rất muốn làm cho người bà ốm yếu của mình được thanh thản hài lòng. Nhưng vì sao ngươi lại phải đi t́m chủ mới? – Cây cỏ hỏi - Phải chăng chủ củ không tốt với mi? 
+										- Bà ta đã qua đời - Vẹt đau đơn báo tin, rồi im lặng giây lát 
+										- Bà ta chết vì tham lam. 
+										- Bà ấy nghèo lắm a? – Cây cỏ hỏi tiếp. 
+										- Không, rất giàu là đằng khác. Song với bà như thế còn quá ít. Bà đã bán đến giọt máu cuối cùng để lấy vàng - Vẹt nguẩy vẻ trách móc. 
+										- Đổi máu lấy vàng là thế nào, ta không hiểu? – Cây cỏ ngạc nhiên. 
+										- Chuyện là thế này. Bà chủ của ta cũng làm nghề bán hoa giấy như nàng, song có một mụ phù  thuỷ đã tiết lộ cho bà một bí mật về cách làm cho hoa giấy trở thành hoa tươi, nghĩa là phải lấy máu của mình tiếp sức cho các cành hoa. Chính nàng cũng thừa hiểu hoa tươi quý như thế nào rồi. Chẳng bao lâu bà chủ trở nên giàu có. Lúc đó mụ phù thuỷ đã báo trước cho bà ta rằng, dù thế nào cũng chớ có hiến đến giọt máu cuối cùng. Nhưng với bà chủ của ta, dầu có tích góp được bao nhiêu của cải cũng vẫn cứ la ít. Và thế là khi có một vị khách ngoại bang hứa cho bà một khoản tiền lớn nếu bà bằng lòng tiếp thêm sinh lực cho hoa. Bà chủ đã không ngần ngại ngay ca3 đến giọt máu cuối cùng để có thêm nhiều tiền và bà đã phải chuốc lấy cái chết. Số của cải bà để lại trở thành miếng mồi ngon cho đám họ hàng xâu xé nhau. …
+
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="duoi">
+							<div class="la">
+								<img class="la1" src="E:/gitHub\html-j2team/buoi5 - CSS buoi1/Bai 4.3 - Hoa Moc Lan/images/la1.jpg" >"
+								<img class="la2" src="E:/gitHub\html-j2team/buoi5 - CSS buoi1/Bai 4.3 - Hoa Moc Lan/images/la2.jpg" >"
+								<img class="la3" src="E:/gitHub\html-j2team/buoi5 - CSS buoi1/Bai 4.3 - Hoa Moc Lan/images/la3.jpg" >"
+							</div>
+							
+						</div>
+					</div>
+					<div class="phai">
+						<img class="hoa" src="E:/gitHub\html-j2team/buoi5 - CSS buoi1/Bai 4.3 - Hoa Moc Lan/images/hoa.jpg">
+						<img class="imgBuom4" src="E:/gitHub\html-j2team/buoi5 - CSS buoi1/Bai 4.3 - Hoa Moc Lan/images/buom4.gif">
+
+						<p class="chamNgang" style="font-size: 5px;">
+							● ● ● ● ● ● ● ● ● ●
+						</p>
+						<p class="chamDoc" style="font-size: 5px;">
+							● 
+							<br>
+							● 
+							<br>
+							● 
+							<br>
+							● 
+							<br>
+							● 
+							<br>
+							● 
+							<br>
+							● 
+							<br>
+							● 
+							<br>
+							● 
+							<br>
+							● 
+							<br>
+							● 
+							<br>
+							● 
+							<br>
+							● 
+							<br>
+							● 
+							<br>
+							● 
+							<br>
+							● 
+							<br>
+							● 
+							<br>
+							● 
+							<br>
+							● 
+							<br>
+							● 
+							<br>
+							● 
+							<br>
+							● 
+							<br>
+							● 
+							<br>
+							● 
+							<br>
+							● 
+							<br>
+							● 
+							<br>
+							● 
+							<br>
+							● 
+							<br>
+							
+							
+						</p>
+						<img class="imgTruyenThuyet" src="E:/gitHub\html-j2team/buoi5 - CSS buoi1/Bai 4.3 - Hoa Moc Lan/images/truyenthuyet.gif">
+					</div>
+				</div>
+			</div>
+
+			<div class="phai">
+				<img src="E:/gitHub\html-j2team/buoi5 - CSS buoi1/Bai 4.3 - Hoa Moc Lan/images/lephai.jpg" style="width: 100%; height: 100%;">
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>

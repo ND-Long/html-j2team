@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Buổi 2</title>
+	<style type="text/css">
+		*{
+			padding: 0;
+		}
+		#divTong {
+			width: 450px;
+			height: 150px;
+			background: pink;
+			margin: 0 auto;
+			text-align: center;
+			
+			
+		}
+
+		#divTong > .tren {
+			width: 100%;
+			height: 25%;
+			background-color: red;
+			line-height: 43px;
+			
+		}
+
+		#divTong > .duoi {
+			width: 100%;
+			height: 75%;
+			background-color: pink;
+		}
+
+		#divTong > .duoi >.tren{
+			width: 100%;
+			height: 70%;
+			/*background-color: blue;*/
+		}
+
+		#divTong > .duoi >.duoi{
+			width: 100%;
+			height: 30%;
+			/*background-color: gray;*/
+		}
+
+		
+		#divTong > .duoi >.tren >.trai{
+			width: 30%;
+			height: 100%;
+			/*background-color: purple;*/
+			float: left;
+		}
+
+		#divTong > .duoi >.tren >.phai{
+			width: 70%;
+			height: 100%;
+			/*background-color: black;*/
+			float: left;
+		}
+
+		
+
+		
+	</style>
+</head>
+<body style="height: 700px;">
+	<div id="divTong">
+		<div class="tren">
+			<p style="color: black; font-size: 30px;text-transform: uppercase;">
+				tính ngày trong tháng
+			</p>
+		</div>
+		<div class="duoi">
+			<div class="tren">
+				<div class="trai">
+					<span style="font-family: Arial;line-height: 30px;margin-left:-30px;">
+						Tháng/năm:
+					</span>
+				</div>
+				<div class="phai">
+					<input type="number" id="nhapThang" placeholder="Nhập tháng" style="width:100px   ;30px;margin-top: 5px;margin-left: -140px;">/
+					<input type="number" id="nhapNam" placeholder="Nhập năm" style="width: 100px"><br>
+					<button type="button" onclick="inRa()" style="margin-top: 10px;margin-left: -150px;width: 150px;">Tính số ngày</button>
+				</div>
+			</div>
+			<div class="duoi">
+				<input type="text" id="oHienThi" style="height: 25px;width: 300px; border-radius: 5px;border: 2px solid gray;">
+			</div>
+		</div>
+	</div>
+	
+	<div id="hienThi">
+		<script type="text/javascript">
+		function inRa(){
+			let ngay = "";
+			let thang = parseInt(document.getElementById('nhapThang').value);
+			let nam = document.getElementById('nhapNam').value;
+			switch (thang){
+				case 1:
+				case 3:
+				case 5:
+				case 7:
+				case 8:
+				case 10:
+				case 12:
+					ngay = 31;
+					break;
+				case 4:
+				case 6:
+				case 9:
+				case 11:
+					ngay = 30;
+					break;
+				case 2:
+					if(nam%400 == 0 || (nam%4==0 && nam%100!=0)){
+						ngay = 29;
+					} else {
+						ngay = 28;
+					}
+					break;
+				default:
+					alert('Nhập lại!!!');
+					break;
+				
+				}
+				
+				if (thang <= 12 ) {
+					document.getElementById('oHienThi').value = ` Tháng ${thang} năm ${nam} có ${ngay} ngày`	    
+				}
+
+			}
+		</script>
+	</div>
+	
+</body>
+</html>

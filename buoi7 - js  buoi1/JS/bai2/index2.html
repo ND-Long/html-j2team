@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Buổi 2</title>
+	<style type="text/css">
+		*{
+			padding: 0;
+		}
+		#divTong {
+			width: 400px;
+			height: 150px;
+			background: pink;
+			margin: 0 auto;
+			text-align: center;
+			border-radius:  30px;
+			
+		}
+
+		#divTong > .tren {
+			width: 100%;
+			height: 40%;
+			/*background-color: blue;*/
+			line-height: 60px;
+			border-radius: 0 30px 0 0;
+		}
+
+		#divTong > .duoi {
+			width: 100%;
+			height: 60%;
+			/*background-color: orange;*/
+			
+		}
+
+
+		#namDL{
+			width: 35%;
+			height: 100%;
+			/*background-color: gray;*/
+			float: left;
+
+
+		}
+
+		#nutChuyen{
+			width: 30%;
+			height: 100%;
+			line-height: 90px;
+			/*background-color: aqua;*/
+			float: left;
+
+		}
+
+		#namAL{
+			width: 35%;
+			height: 100%;
+			/*background-color: yellow;*/
+			float: left;
+
+		}
+
+		.fontDuoi{
+			font-family: Arial;
+			color: brown;
+		}
+
+		.ipNam{
+			width: 100px;
+			border-radius: 5px;
+			border: 2px solid gray;
+		}
+
+		
+	</style>
+</head>
+<body style="height: 700px;">
+	<div id="divTong">
+		<div class="tren">
+			<p style="color: gray; font-size: 30px;			text-transform: uppercase;">
+				tính năm âm lịch
+			</p>
+		</div>
+		<div class="duoi">
+			<div id="namDL">
+				<span class="fontDuoi">
+					<br>
+					Năm dương lịch
+					<br>
+					<input type="text" class="ipNam" id="ipNamAm" ;>
+				</span>
+				
+				
+			</div>
+
+			<div id="nutChuyen">
+				<button style="color: red;background: white ;border-radius: 10px;cursor: pointer;width: 50px; border: 2px solid gray;" type="button" onclick="inRa()">=></button>
+			</div>
+				
+			<div id="namAL">
+				<span class="fontDuoi">
+					<br>
+					Năm âm lịch
+					<br>
+					<input type="text" id="outNamAm" class="ipNam">
+				</span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="hienThi">
+		<script type="text/javascript">
+		function inRa(){
+			let nam = document.getElementById('ipNamAm').value;
+		let can='';
+		let chi='';
+		can = (nam-3)%10;
+		chi = (nam-3)%12;
+		switch (can){
+			case 0:
+			can = 'Quý';
+			break;
+			case 1:
+			can = 'Giáp';
+			break;
+			case 2:
+			can = 'Ất';
+			break;
+			case 3:
+			can = 'Bính';
+			break;
+			case 4:
+			can = 'Đinh';
+			break;
+			case 5:
+			can = 'Mậu';
+			break;
+			case 6:
+			can = 'Kỷ';
+			break;
+			case 7:
+			can = 'Canh';
+			break;
+			case 8:
+			can = 'Tân';
+			break;
+			case 9:
+			can = 'Nhâm';
+			break;
+			default:
+			alert('Nhập lại');
+			break;
+		}
+
+		switch (chi){
+			case 0:
+			chi = 'Hợi';
+			break;
+			case 1:
+			chi = 'Tý';
+			break;
+			case 2:
+			chi = 'Sửu';
+			break;
+			case 3:
+			chi = 'Dần';
+			break;
+			case 4:
+			chi = 'Mão';
+			break;
+			case 5:
+			chi = 'Thìn';
+			break;
+			case 6:
+			chi = 'Tỵ';
+			break;
+			case 7:
+			chi = 'Ngọ';
+			break;
+			case 8:
+			chi = 'Mùi';
+			break;
+			case 9:
+			chi = 'Thân';
+			break;
+			case 10:
+			chi = 'Dậu';
+			break;
+			case 11:
+			chi = 'Tuất';
+			break;
+			default:
+			alert('Nhập lại');
+			break;
+		}
+		if (nam != 0) {
+			document.getElementById('outNamAm').value = `${can} ${chi}`;
+
+		}
+		
+
+		}
+	</script>
+	</div>
+	
+</body>
+</html>

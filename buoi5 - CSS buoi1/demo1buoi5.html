@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Buổi 5 - bai 1</title>
+	<style type="text/css">
+		#divTong {
+			width: 100%;
+			height: 850px;
+			/*background: pink;*/
+		}
+		#divTren {
+			width: 100%;
+			height: 13%;
+			 border-bottom: 7px solid green;
+			
+		}
+		
+		#divTren > .trai{
+			width: 50%;
+			height: 110px;
+			/*background: yellow;*/
+			float: left;
+			
+
+		}
+		#divTren > .phai{
+			width: 50%;
+			height: 100%;
+			/*background: black;*/
+			float: left;
+		}
+		#divTren > .phai > .tren{
+			width: 100%%;
+			height: 85%;
+			/*background: purple;*/
+			text-align: right;
+		}
+		#divTren > .phai > .duoi{
+			width: 100%%;
+			height: 15%;
+			/*background: blue;*/
+			text-align: right;
+			
+		}
+		
+		/*div duoi*/
+		#divDuoi {
+			width: 100%;
+			height: 86%;
+			border-top: ;: 70px solid green
+			/*background: green;*/
+		}
+		#divDuoi > .trai{
+			width: 25%;
+			height: 100%;
+			background: #3CB371;
+			float: left;
+			border-right: 7px solid green;
+		}
+		#divDuoi > .giua{
+			width: 59%;
+			height: 100%;
+			/*background: red;*/
+			float: left;
+		}
+		#divDuoi > .phai{
+			width: 15%;
+			height: 100%;
+			/*background: aqua;*/
+			float: left;
+		}
+		#divDuoi > .trai .duoi{
+			width: 100%;
+			height: 50%;
+			/*background: blue;*/
+			/*float: left;*/
+		}
+		#divDuoi > .trai .tren{
+			width: 100%;
+			height: 50%;
+			/*background: green;*/
+			/*float: left;*/
+		}
+		#divDuoi > .phai .tren{
+			width: 100%;
+			height: 26%;
+			background: #3CB371;
+			/*float: left;*/
+		}
+		#divDuoi > .phai .duoi{
+			width: 100%;
+			height: 72%;
+			/*background: blue;*/
+			/*float: left;*/
+		}
+
+		#divDuoi > .giua .tren{
+			width: 100%;
+			height: 38%;
+			/*background: purple;*/
+			float: left;
+		}
+		#divDuoi > .giua .duoi{
+			width: 100%;
+			height: 62%;
+			/*background: pink;*/
+			float: left;
+		}
+
+		#divDuoi > .giua .tren .trai{
+			width: 15%;
+			height: 100%;
+			/*background: orange;*/
+			float: left;
+		}
+		#divDuoi > .giua .tren .giua{
+			width: 55%;
+			height: 100%;
+			/*background: aqua;*/
+			float: left;
+		}
+		#divDuoi > .giua .tren .phai{
+			width: 30%;
+			height: 100%;
+			/*background: gray;*/
+			float: left;
+		}
+		#divDuoi > .giua .duoi .trai{
+			width: 15%;
+			height: 100%;
+			/*background: gray;*/
+			float: left;
+		}
+
+		#divDuoi > .phai .duoi .trai{
+			width: 30%;
+			height: 100%;
+			/*background: gray;*/
+			float: left;
+		}
+		#divDuoi > .phai .duoi .phai{
+			width: 70%;
+			height: 100%;
+			/*background: gray;*/
+			float: left;
+		}
+
+		.divTren >.trai, .logo{
+			position: absolute;
+		}
+
+
+		
+
+		
+		
+		
+	</style>
+</head>
+<body>
+	<div id="divTong">
+		<div id="divTren">
+			<div class="trai">
+				
+			</div>
+			<div class="logo">
+				<img src="E:\gitHub\html-j2team\buoi5 - CSS buoi1\Bai 4.2 - Hoa Canh\images\logo.gif" style="height: 130px;">
+			</div>
+
+			<div class="phai">
+				<div class="tren">
+					<form>
+						<select>
+							<option>Hội hoa lan và cây cảnh</option>
+						</select>
+						<button >go</button>
+					</form>
+				</div>
+
+				<div class="duoi">
+					<a href="">
+						<img src="E:/gitHub\html-j2team/buoi5 - CSS buoi1/Bai 4.2 - Hoa Canh/images/n_hoavacc.gif">
+					</a>
+					<a href="">
+						<img src="E:/gitHub\html-j2team/buoi5 - CSS buoi1/Bai 4.2 - Hoa Canh/images/n_hoavacc.gif">
+					</a>
+					<a href="">
+						<img src="E:/gitHub\html-j2team/buoi5 - CSS buoi1/Bai 4.2 - Hoa Canh/images/n_hoavacc.gif">
+					</a>
+					<a href="">
+						<img src="E:/gitHub\html-j2team/buoi5 - CSS buoi1/Bai 4.2 - Hoa Canh/images/n_hoavacc.gif">
+					</a>
+					
+					
+					
+				</div>
+			</div>
+		</div>
+		<div id="divDuoi">
+			<div class="trai">
+				<div class="tren">
+					<img src="E:/gitHub\html-j2team/buoi5 - CSS buoi1/Bai 4.2 - Hoa Canh/images/tintuc_bientrai.gif">
+				</div>
+				<div class="duoi">
+					<img src="E:/gitHub\html-j2team/buoi5 - CSS buoi1/Bai 4.2 - Hoa Canh/images/Hoavang.gif">
+				</div>
+				
+			</div>
+			<div class="giua">
+				<div class="tren">
+					<div class="trai">
+						<img src="E:/gitHub\html-j2team/buoi5 - CSS buoi1/Bai 4.2 - Hoa Canh/images/mau.jpg">
+					<br>
+					<img src="E:/gitHub\html-j2team/buoi5 - CSS buoi1/Bai 4.2 - Hoa Canh/images/buom1.gif">
+					</div>
+					<div class="giua">
+						<p style="font-weight: bold; font-family: Arial, Helvetica, sans-serif; font-size: 25px;">
+							Muôn hoa đua sắc 
+						</p>
+						
+						<span style="font-family: Arial, Helvetica, sans-serif;">
+							Đã là hoa thì hoa nào cũng đẹp. Kể từ những đoá hoa dân dã giản dị bình thường. Hoa sim, hoa mua tím biếc sườn đồi. Hoa cà tím biếc vườn quê. Hoa lục bình tím biếc trên dòng sông. Hoa súng tím biếc ao làng. Hoa xoan tím biếc những chiều xóm vắng…. Hoa gạo đỏ đầu làng, hoa phượng đỏ trời góc phố. Hoa mào gà, hoa dong riềng đỏ góc vườn ai. Hoa cau, hoa dừa trắng phau lưng trời. Những loài hoa dân giả muôn màu muôn sắc cũng đẹp huống chi là các loài hoa quý phái.
+						</span>
+                         
+							
+
+						
+					</div>
+					<div class="phai">
+						<img src="E:/gitHub\html-j2team/buoi5 - CSS buoi1/Bai 4.2 - Hoa Canh/images/buom4.gif" style="width: 100%">
+						
+						
+					</div>
+					
+				</div>
+				<div class="duoi">
+					<div class="trai"></div>
+					<div class="phai">
+						<p style="font-family: Arial;">
+							Một trong những loài hoa quý phái là hoa lan. "Vua thưởng lan, quan thưởng trà". Cái hương lan - " cái hương thuỷ quái gì mà mê đắm lòng người đến thế". Phong lan thơm sực nức, nồng nàn, gần gũi. Địa lan thanh cao, nhẹ nhõm, lúc thắm thiết, sực nức, lúc nhạt nhoà xa xăm. Đoá bạch ngọc khi nở có màu sáng như chiếc hài của thần vệ nữ tự ngày xưa. <br> <br>
+
+							Hoa mai có nhiều loài. Từ ngũ đài hoa - năm cánh vàng rực rỡ đến hoàng tỉ trên 30 cánh. Hoa mai đẹp từ gốc đến cành, sống lâu bền, xếp vào hàng cổ thụ "lão mai độc thọ nhất chi vinh" (thơ cổ). Hoa mai không phô sắc hương mà khiêm tốn dịu dàng, tượng trưng cho cốt cách của người quân tử, chịu được cái giá rét của mùa đông để nở vào một sớm xuân hồng. <br> <br>
+
+							Hoa cúc vàng trong hàng tứ quý " tùng, cúc, trúc, mai" tượng trưng cho mặt trời, cho quyền lực. Cúc đại đoá bông to, cành cong lộng lẫy sang trọng, cúc vạn thọ giản dị, bền lâu. Hoa cúc là loại "diệp bất li chi, hoa vô lạc địa", lá cúc không bao giờ rời khỏi cành dẫu đã héo khô, hoa tàn cánh không rụng như người quân tử không xa rời lý tưởng. <br> <br>
+							 
+							Loài hao mang biểu tượng của mùa xuân là hoa đào. Những cánh hoa đào rưng rưng khoe sắc, màu hồng phơn phớt hay hồng đậm xen trong lá non như vẻ e ấp ngại ngùng như người thiếu nữ. Hoa đào như muôn cánh bướm hồng rung rinh trong gió, khoe sắc trong nắng xuân. <br>
+
+
+
+						</p>
+					</div>
+					
+				</div>
+			</div>
+			<div class="phai">
+				<div class="tren">
+					<img src="E:/gitHub\html-j2team/buoi5 - CSS buoi1/Bai 4.2 - Hoa Canh/images/thamgia.gif" style="width: 100%">
+					 <form style="text-align: center;">
+					 	Họ tên <br>
+					 	<input type="text" style="width: 60%; ">
+					 	<br>
+					 	Mã số <br>
+					 		<input type="text" style="width: 60%; ">
+					 		<br>
+					 		<img src="E:/gitHub\html-j2team/buoi5 - CSS buoi1/Bai 4.2 - Hoa Canh/images/ok.gif" style="width: 40%">	
+					 		<img src="E:/gitHub\html-j2team/buoi5 - CSS buoi1/Bai 4.2 - Hoa Canh/images/quen.gif" style="width: 100%">
+					 </form>
+
+							
+						
+				</div>
+				<div class="duoi">
+					<div class="trai">
+						<ul style="color: #228B22; font-size: ;">
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						
+						
+						
+					</ul>
+					</div>
+					<div class="phai">
+						<br> <br>
+						<img src="E:/gitHub\html-j2team/buoi5 - CSS buoi1/Bai 4.2 - Hoa Canh/images/h2.jpg" style="height: 500px">
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
