@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bài 1 buổi 9</title>
+	<style type="text/css">
+		#table{
+			width: 300px;
+			height: 100%;
+			padding: 10px;
+			background: pink;
+			margin: 0 auto;
+			position: relative;
+			border-radius: 10px;
+			box-shadow: 2px 4px 10px gray;
+		}
+
+		#show{
+			margin-top: 10px;
+			width: 300px;
+			height: 100%;
+			background: aqua;
+		}
+
+		.btn{
+			margin-top: 5px;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="table">
+		<h1 style="margin-top: -5px; background: ;">
+			Nhập số và tính toán
+		</h1>
+
+		<form id="form">
+		Nhập số:
+		<input type="number" id="input" placeholder="Nhập số">
+		<br>
+		<button type="button" id="btn" onclick="inputNB()" class="btn">Nhập và hiển thị</button>
+		
+
+		</form>
+		<div id="show1">
+			<table>
+				<tr>
+					<td>
+						Số chẵn
+					</td>
+					<td>
+						<input type="text" readonly id="soChan">
+					</td>
+				</tr>
+		</div>
+
+		<div id="show2">
+			<tr>
+				<td>
+					Số lẻ
+				</td>
+				<td>
+					<input type="text" readonly id="soLe">
+				</td>
+			</tr>
+		</div>
+
+		<div id="show3">
+			<tr>
+					<td>
+						Tổng 
+					</td>
+					<td>
+						<input type="text" readonly id="tongNB">
+					</td>
+			</tr>
+		</div>
+				
+		<div id="show4">
+			<tr>
+					<td>
+						Max
+					</td>
+					<td>
+						<input type="text" readonly id="maxNB">
+					</td>
+			</tr>
+		</div>	
+				
+		<div id="show5">
+			<tr>
+					<td>
+						Min
+					</td>
+					<td>
+						<input type="text" readonly id="minNB">
+					</td>
+			</tr>
+		</div>
+							
+	</div>
+		
+		
+	<script type="text/javascript">
+		let number;
+		let tong=0;
+		var array = [];
+		let i = j = 0;
+		let max;
+		let min;
+					var input = document.getElementById("input");
+			        input.addEventListener("keypress", function(event) {
+			            if (event.key === "Enter") {
+			            event.preventDefault();
+			            document.getElementById("btn").click();
+			            // return false;
+			            }
+			        });
+		
+		function inputNB(){
+		
+			number = parseFloat(document.getElementById('input').value);
+			array.push(number);
+			document.getElementById('input').value = '';
+				max = array[0];
+				min = array[0];
+		// }
+
+		// function outputNB(){
+			let countnt=0;
+			//Tính số chẵn và lẻ
+			for(;i < array.length; i++){
+				if(array[i]%2==0){
+					document.getElementById('soChan').value += array[i]+' '
+				} else if(array[i]%2==1) {
+					document.getElementById('soLe').value += array[i]+' '
+				}
+			}
+			
+			
+			//Tính tổng
+			for(;j < array.length; j++){
+				tong +=array[j];
+			}
+			document.getElementById('tongNB').value = tong;
+			
+			//Tìm max và min
+			
+			for(let k = 0;k<array.length;k++){
+				
+				if(array[k]>max){
+					max = array[k];
+					
+				}
+				if(array[k]<min){
+					min = array[k];
+					
+				}
+			}
+			document.getElementById('maxNB').value = max;
+			document.getElementById('minNB').value = min;
+			
+			//Tìm snt
+			for(let num = 0;num<array.length ; ++num){
+				let count = 0;
+				for (let z=1;z<array.length;z++){
+					if (array[num]%z==0){
+						count++;
+					}
+				}
+				if (count < 2 && num >0){
+					document.getElementById('sntNB').value +=array[num] + ' ';
+				}
+			}
+
+			}
+
+			
+	</script>
+</body>
+</html>
